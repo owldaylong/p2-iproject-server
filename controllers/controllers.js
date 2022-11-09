@@ -102,6 +102,61 @@ class Controller {
 			console.log(err);
 		}
 	}
+
+	static async getTransactions(req, res, next) {
+		const { id: UserId } = req.user;
+
+		try {
+			const transactions = await Transaction.findAll({
+				where: { UserId },
+				attributes: {
+					exclude: ["createdAt", "updatedAt"],
+				},
+				include: {
+					model: Beverage,
+				},
+			});
+
+			res.status(200).json(transactions);
+		} catch (err) {
+			console.log(err);
+		}
+	}
+
+	static async addTransaction(req, res, next) {
+		try {
+			let UserId = req.user.id;
+			let BeverageId = req.params.id;
+			let { quantity } = req.body;
+			let status = "pending";
+
+			let findTransaction = await Transaction.findOne({
+				where: { UserId, BeverageId },
+			});
+
+			if (findTransaction) {
+				quantity++;
+
+				let transaction = await Transaction.update(
+					{ UserId, BeverageId, quantity, status },
+					{ where: { BeverageId } }
+				);
+
+				res.status(201).json(transaction);
+			} else {
+				let transaction = await Transaction.create({
+					UserId,
+					BeverageId,
+					quantity,
+					status,
+				});
+
+				res.status(201).json(transaction);
+			}
+		} catch (err) {
+			console.log(err);
+		}
+	}
 }
 
 module.exports = Controller;

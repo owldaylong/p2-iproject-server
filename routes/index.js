@@ -5,6 +5,7 @@ const Controller = require("../controllers/controllers");
 const register = require("./register");
 const login = require("./login");
 const beverages = require("./beverages");
+const transactions = require("./transactions");
 const authentication = require("../middlewares/authentication");
 
 // ACCOUNTS
@@ -16,5 +17,6 @@ router.use("/login", login);
 router.use("/beverages", beverages);
 
 router.use(authentication);
+router.use("/transactions", transactions);
 
 module.exports = router;
