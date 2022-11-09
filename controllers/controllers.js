@@ -28,7 +28,7 @@ class Controller {
 				email: createdUser.email,
 			});
 		} catch (err) {
-			next(err);
+			console.log(err);
 		}
 	}
 
@@ -57,7 +57,7 @@ class Controller {
 				.status(200)
 				.json({ access_token, role: findUser.role, email: findUser.email });
 		} catch (err) {
-			next(err);
+			console.log(err);
 		}
 	}
 }

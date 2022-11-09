@@ -1,4 +1,4 @@
-const { verifyToken } = require("../helpers/jwt");
+const { verifyToken } = require("../helpers/helpers");
 const { User } = require("../models");
 
 async function authentication(req, res, next) {
@@ -16,10 +16,9 @@ async function authentication(req, res, next) {
 			role: user.role,
 			email: user.email,
 		};
-
 		next();
 	} catch (err) {
-		next(err);
+		console.log(err);
 	}
 }
 
