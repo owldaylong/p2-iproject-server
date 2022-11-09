@@ -60,6 +60,15 @@ class Controller {
 			console.log(err);
 		}
 	}
+
+	static async getAllBeverages(req, res, next) {
+		try {
+			const beverages = await Beverage.findAll();
+			res.status(200).json(beverages);
+		} catch (err) {
+			console.log(err);
+		}
+	}
 }
 
 module.exports = Controller;
