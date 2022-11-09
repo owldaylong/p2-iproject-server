@@ -13,6 +13,7 @@ router.use("/register", register);
 router.use("/login", login);
 
 // MAIN INTERFACE - CONSUMER
+router.use("/beverages", beverages);
 
 router.use(authentication);
 
