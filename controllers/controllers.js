@@ -62,8 +62,41 @@ class Controller {
 	}
 
 	static async getAllBeverages(req, res, next) {
+		// pagination
+		let options = {
+			attributes: {
+				exclude: [, "createdAt", "updatedAt"],
+			},
+		};
+		let limit;
+		let offset;
+		let totalPage;
+		let { page } = req.query;
+		if (page !== "" && typeof page !== "undefined") {
+			limit = 9;
+			options.limit = limit;
+			if (page.number !== "" && typeof page.number !== "undefined") {
+				offset = page.number * limit - limit;
+				options.offset = offset;
+			}
+		} else {
+			limit = 9; // limit 9 items
+			offset = 0;
+			totalPage = 1;
+			options.limit = limit;
+			options.offset = offset;
+		}
+
+		if (!page) {
+			page = {};
+			totalPage = 1;
+			page.number = 1;
+		}
 		try {
-			const beverages = await Beverage.findAll();
+			const beverages = await Beverage.findAndCountAll(options);
+
+			beverages.totalPage = Math.ceil(beverages.count / limit);
+			beverages.currentPage = page.number ? page.number : 0;
 			res.status(200).json(beverages);
 		} catch (err) {
 			console.log(err);
