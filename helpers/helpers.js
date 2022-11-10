@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const SECRET = "kamunanyeak?";
+const SECRET = "kamunanyeak";
 
 // bcrypt - hashing password
 
