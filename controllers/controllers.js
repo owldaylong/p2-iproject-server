@@ -61,6 +61,48 @@ class Controller {
 		}
 	}
 
+	static async loginGoogle(req, res, next) {
+		const { OAuth2Client } = require("google-auth-library");
+		const client = new OAuth2Client(process.env.GOOGLE_ID);
+
+		try {
+			const ticket = await client.verifyIdToken({
+				idToken: req.headers.google_token,
+				audience: process.env.GOOGLE_ID,
+			});
+			const googlePayload = ticket.getPayload();
+			const userid = googlePayload["sub"];
+
+			const [userGoogle] = await User.findOrCreate({
+				where: {
+					email: googlePayload.email,
+				},
+				defaults: {
+					username: googlePayload.given_name,
+					email: googlePayload.email,
+					password: "loginfromgoogle",
+				},
+				hooks: false,
+			});
+
+			const payload = {
+				id: userGoogle.id,
+				role: userGoogle.role,
+				email: userGoogle.email,
+			};
+
+			let access_token = createToken(payload);
+
+			res.status(200).json({
+				access_token,
+				role: userGoogle.role,
+				email: userGoogle.email,
+			});
+		} catch (err) {
+			console.log(err);
+		}
+	}
+
 	static async getAllBeverages(req, res, next) {
 		// pagination
 		let options = {
