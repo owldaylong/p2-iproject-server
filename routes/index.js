@@ -7,6 +7,7 @@ const login = require("./login");
 const googleLogin = require("./google-login");
 const beverages = require("./beverages");
 const transactions = require("./transactions");
+const weather = require("./weather");
 
 const authentication = require("../middlewares/authentication");
 
@@ -18,6 +19,7 @@ router.use("/google-login", googleLogin);
 
 // MAIN INTERFACE - CONSUMER
 router.use("/beverages", beverages);
+router.use("/weather", weather);
 
 router.use(authentication);
 router.use("/transactions", transactions);

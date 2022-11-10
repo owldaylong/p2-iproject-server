@@ -4,6 +4,7 @@ const {
 	createToken,
 	verifyToken,
 } = require("../helpers/helpers");
+const axios = require("axios");
 
 class Controller {
 	static home(req, res) {
@@ -194,6 +195,24 @@ class Controller {
 				});
 
 				res.status(201).json(transaction);
+			}
+		} catch (err) {
+			console.log(err);
+		}
+	}
+
+	static async getUserWeather(req, res, next) {
+		try {
+			let { latitude, longitude } = req.headers;
+
+			// let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=6ee48da0dbd896fd6e20009075bcc6b0`;
+
+			let weather = await axios.get(
+				`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=6ee48da0dbd896fd6e20009075bcc6b0`
+			);
+
+			if (weather.data.weather[0].main === "Rain") {
+				res.status(200).json("Hujan-hujan gini, enaknya yang panas!");
 			}
 		} catch (err) {
 			console.log(err);
