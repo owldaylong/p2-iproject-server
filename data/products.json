@@ -1,0 +1,240 @@
+[
+    {
+    "id": 1,
+    "name": "Kopi Dolce",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172134048189/detail/432fbff879544410931a96a5ace8b9f8_1629393694210308471.webp",
+    "description": "Kopi dicampur Susu Segar dan Kental Manis",
+    "price": 24000
+    },
+    {
+    "id": 2,
+    "name": "Vanilla Latte",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172128201237/detail/e2b370f251f44d46b691914f4c4454ed_1629393688395390638.webp",
+    "description": "Espresso dan Susu dngan Sirup Vanilla",
+    "price": 28000
+    },
+    {
+    "id": 3,
+    "name": "Latte",
+    "description": "Espresso dan Susu Steamed",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172126052616/detail/148c4933fc144f6aa6b0c4eac98c1e53_1629393686184985563.webp",
+    "price": 24000
+    },
+    {
+    "id": 4,
+    "name": "Kopi Susu Gula Aren",
+    "description": "Kopi Susu dengan Gula Aren Asli Indonesia",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172125387882/detail/b0aa22d5f8494296b471e2f2f30e6f61_1629393685795753931.webp",
+    "price": 22000
+    },
+    {
+    "id": 5,
+    "name": "Hazelnut Latte",
+    "description": "Espresso, Vanilla, dan Susu dengan Sirup Hazelnut",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172124410527/detail/058b150fb5604952b5fd42e4dfa969f1_1629393684766406021.webp",
+    "price": 28000
+    },
+    {
+    "id": 6,
+    "name": "Dua Shot Iced Shaken",
+    "description": "Double Shot Espresso",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172124235346/detail/0956d462f68a491b93cb461791f54b6a_1629393684395104921.webp",
+    "price": 28000
+    },
+    {
+    "id": 7,
+    "name": "Caramel Latte",
+    "description": "Espresso dan Susu dengan Sirup Caramel",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172123509833/detail/42a767d105cc4512b60d4491d4a6a4cb_1629393683989303512.webp",
+    "price": 24000
+    },
+    {
+    "id": 8,
+    "name": "Cappucino",
+    "description": "Espresso, Susu Steamed, dan Buih Susu",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172123374036/detail/2e811d203ecd4bdf9ae22d8af2cea0ef_1629393683700668280.webp",
+    "price": 24000
+    },
+    {
+    "id": 9,
+    "name": "Avocado Coffee",
+    "description": "Alpukat dipadu dengan Espresso",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172123208711/detail/46839ed0a7b443d7b1ffe3e37a29cd6b_1629393683347823551.webp",
+    "price": 34000
+    },
+    {
+    "id": 10,
+    "name": "Americano",
+    "description": "Espresso yang dicampur Air Mineral",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172123025035/detail/e91d8b96db4d421dbe42dbf948ef0932_1629393683062079678.webp",
+    "price": 18000
+    },
+    {
+    "id": 11,
+    "name": "Caramel Macchiato",
+    "description": "Espresso, Susu Steamed, dan Racikan Karamel Spesial",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172127228352/detail/840a9c5c9d974cc2849ac861af221f41_1629393687425023565.webp",
+    "price": 24000
+    },
+    {
+    "id": 12,
+    "name": "Mocha Latte",
+    "description": "Perpadual klasik antara cokelat asli Belanda dengan Espresso",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172128399093/detail/02cf1689b9b546209ba3b05b51d81ee4_1629393688670515616.webp",
+    "price": 31000
+    },
+    {
+    "id": 13,
+    "name": "Kopi Susu Gula Aren with Golden Boba",
+    "description": "Kopi Susu dengan Gula Aren Asli Indonesia dipadu dengan Golden Boba",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20211205201555285854/detail/6e6ea02baea14350b55b9ff9c1d3e8be_1663668836661889024.webp",
+    "price": 28000
+    },
+    {
+    "id": 14,
+    "name": "Lemon Black Tea",
+    "description": "Lemon dan Black Tea",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172142057657/detail/98a02f4e7464486c829e501fa47ceb88_1629393702154290002.webp",
+    "price": 19000
+    },
+    {
+    "id": 15,
+    "name": "Thai Tea",
+    "description": "Teh Thailand dan Susu",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172141032356/detail/a6b7aef2a7dc4d5cba067dc6b3f79097_1629393701049682038.webp",
+    "price": 22000
+    },
+    {
+    "id": 16,
+    "name": "Thai Green Tea",
+    "description": "Teh Thailand Hijau dan Susu",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172140286488/detail/2827b415a28f4a329096105fff8ffb25_1629393700736380501.webp",
+    "price": 23000
+    },
+    {
+    "id": 17,
+    "name": "Milk Tea",
+    "description": "Teh dengan Susu",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172139134149/detail/2d76e91b42054571954b2e6028876e9c_1629393699389294872.webp",
+    "price": 19000
+    },
+    {
+    "id": 18,
+    "name": "Milo Dinosaurus",
+    "description": "Susu Milo dengan topping Bubuk Milo",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172137269162/detail/fa5953b4dc884e77b7a4c727e4608068_1629393697551680529.webp",
+    "price": 22000
+    },
+    {
+    "id": 19,
+    "name": "Avocado Milk",
+    "description": "Alpukat dipadu dengan Susu",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172135137200/detail/29ed323972bb4a33b8c8f1a791201931_1629393695371889716.webp",
+    "price": 26000
+    },
+    {
+    "id": 20,
+    "name": "Raspberry Hibiscus",
+    "description": "Teh Buah Raspberry & Bunga Hibiscus",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172141280115/detail/34b8436636df4232a35d0fcc57cbbb39_1629393701781686743.webp",
+    "price": 22000
+    },
+    {
+    "id": 21,
+    "name": "Earl Grey Tea",
+    "description": "Teh Melati Earl Grey",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172141182686/detail/502dc59e230442faa8dc8c4c48afa5d3_1629393701394768195.webp",
+    "price": 18000
+    },
+    {
+    "id": 22,
+    "name": "Earl Grey Milk Tea",
+    "description": "Teh Melati Earl Grey dengan Susu",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172139010788/detail/6ad710f005d14768997ae8c922b45ed0_1629393699018406397.webp",
+    "price": 19000
+    },
+    {
+    "id": 23,
+    "name": "Hazelnut Choco",
+    "description": "Teh dan Susu yang dipadu dengan Cokelat Premium juga Hazelnut",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172138247375/detail/901aefadb5a347ea8e805cb752cb96f6_1629393698659404141.webp",
+    "price": 23000
+    },
+    {
+    "id": 24,
+    "name": "Susu Grass Jelly",
+    "description": "Susu dengan Gula Aren dan topping Grass Jelly",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172138111194/detail/edeef9a6c89c4280a9606e2bc4aea4d0_1629393698291777988.webp",
+    "price": 24000
+    },
+    {
+    "id": 25,
+    "name": "Oreo Shake",
+    "description": "Susu Vanilla dengan Remah Oreo",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172137415640/detail/ecd6cfbeb0814730af7c89bfe770dc19_1629393697973129642.webp",
+    "price": 26000
+    },
+    {
+    "id": 26,
+    "name": "Chocolate Caramel",
+    "description": "Cokelat Asli dipadu dengan Susu dan Saus Karamel Special",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172136325353/detail/2dc365d145f74a0c95bb9ff662352dc9_1629393696767981831.webp",
+    "price": 31000
+    },
+    {
+    "id": 27,
+    "name": "Chocolate Hazelnut",
+    "description": "Cokelat Asli dipadu dengan Susu dan Sirup Hazelnut",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172136019390/detail/9acdb448fda54645af14a75919c8cbf9_1629393696015728896.webp",
+    "price": 31000
+    },
+    {
+    "id": 28,
+    "name": "Avocado Caramel",
+    "description": "Alpukat dipadu dengan Saus Caramel",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172135244769/detail/7c07f0cc808544f7a9af5354ad3775b0_1629393695645340268.webp",
+    "price": 30000
+    },
+    {
+    "id": 29,
+    "name": "Dutch Chocolate",
+    "description": "Cokelat Asli Belanda dipadu dengan Susu Creamy",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172134378705/detail/5c3f8c884de04ef8a6be53654102b1fb_1629393694879119766.webp",
+    "price": 26000
+    },
+    {
+    "id": 30,
+    "name": "Susu Boba Gula Aren",
+    "description": "Susu dan Gula Aren dengan tambahan Golden Boba",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172122386592/detail/743b24074d8c426cb1eac0c57e66ee57_1663668836610535818.webp",
+    "price": 24000
+    },
+    {
+    "id": 31,
+    "name": "Milk Tea Boba",
+    "description": "Black Tea, Susu Segar yang dipadu dengan Golden Boba",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172122231945/detail/6195df9bc2654df9a71003e66c1ca438_1663668836634945496.webp",
+    "price": 25000
+    },
+    {
+    "id": 32,
+    "name": "Earl Grey Boba",
+    "description": "Teh Melati Earl Grey dengan topping Golden Boba",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172122067891/detail/285ec0100b364c148d363a15015a2282_1663668836692927612.webp",
+    "price": 25000
+    },
+    {
+    "id": 33,
+    "name": "Hazelnut Choco Boba",
+    "description": "Cokelat Hazelnut Milk Tea yang dipadu dengan Golden Boba",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172121331118/detail/4e5c5bd1fa69459199f02d12874fdc2b_1663668836661869442.webp",
+    "price": 29000
+    },
+    {
+    "id": 34,
+    "name": "Milk Tea Grass Jelly Gula Aren",
+    "description": "Teh Susu dan Gula Aren Asli Indonesia dengan topping Grass Jelly",
+    "imgUrl": "https://d1sag4ddilekf6.azureedge.net/compressed_webp/items/IDITE20210819172134209899/detail/21d4a786e1044aa0b5db64e48902fd64_1629393694545396120.webp",
+    "price": 23000
+    }
+]
