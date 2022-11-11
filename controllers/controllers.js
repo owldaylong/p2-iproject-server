@@ -29,7 +29,12 @@ class Controller {
 				email: createdUser.email,
 			});
 		} catch (err) {
-			console.log(err);
+			if (
+				err.name === "SequelizeValidationError" ||
+				err.name === "SequelizeUniqueConstraintError"
+			) {
+				res.status(400).json({ message: err.errors[0].message });
+			}
 		}
 	}
 
@@ -205,15 +210,85 @@ class Controller {
 		try {
 			let { latitude, longitude } = req.headers;
 
-			// let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=6ee48da0dbd896fd6e20009075bcc6b0`;
+			const OPENWEATHER_API = process.env.OPENWEATHER_API;
 
 			let weather = await axios.get(
-				`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=6ee48da0dbd896fd6e20009075bcc6b0`
+				`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${OPENWEATHER_API}`
 			);
 
+			console.log(weather.data);
+
+			let celcius = Math.ceil(weather.data.main.temp - 273.15);
+			let message;
+			console.log(celcius);
+			console.log(weather.data.weather[0].main, "<<<<<");
 			if (weather.data.weather[0].main === "Rain") {
-				res.status(200).json("Hujan-hujan gini, enaknya yang panas!");
+				message = "Hujan-hujan gini, enaknya yang hangat!";
+			} else if (weather.data.weather[0].main === "Clouds") {
+				message = "Mendung..\n Enaknya minum yang hangat!";
+			} else if (weather.data.weather[0].main === "Drizzle") {
+				message = "Gerimis mengundang, enaknya minum yang hangat!";
+			} else if (weather.data.weather[0].main === "Clear") {
+				message = "Cuaca cerah gini enaknya minum yang dingin!";
+			} else if (weather.data.weather[0].main === "Haze") {
+				message = "Lagi berkabut gini enaknya minum yang hangat!";
 			}
+			res.status(200).json({ message, celcius });
+		} catch (err) {
+			console.log(err);
+		}
+	}
+
+	static payment(req, res, next) {
+		let randomized = Math.floor(Math.random() * 10000);
+
+		let data = JSON.stringify({
+			transaction_details: {
+				order_id: "ORDER-101-1668135101",
+				gross_amount: 10000,
+			},
+			credit_card: {
+				secure: true,
+			},
+		});
+
+		let config = {
+			method: "post",
+			url: "https://app.sandbox.midtrans.com/snap/v1/transactions",
+			headers: {
+				Accept: "application/json",
+				"Content-Type": "application/json",
+				Authorization:
+					"Basic U0ItTWlkLXNlcnZlci1UcUxfdGZCUWJ4QkdhOWNFME8wWElxM1E6",
+			},
+			data: data,
+		};
+
+		axios(config)
+			.then(function (response) {
+				res.status(201).json(response.data);
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+	}
+
+	static async paymentSuccess(req, res, next) {
+		try {
+			let UserId = req.user.id;
+			let status = "paid";
+
+			let transaction = await Transaction.update(
+				{ BeverageId, quantity, status },
+				{ where: { UserId, status: "pending" } }
+			);
+
+			const { data } = await axios.update(
+				{ UserId, BeverageId, status },
+				{ where: { BeverageId } }
+			);
+
+			res.status(200).json(data);
 		} catch (err) {
 			console.log(err);
 		}
